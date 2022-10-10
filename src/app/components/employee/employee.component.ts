@@ -32,6 +32,7 @@ export class EmployeeComponent implements OnInit {
     }else{
       this.employeeService.createEmployee(form.value).subscribe(res => {
         console.log(res);
+        this.getEmployees();
         form.reset();
       });
     }
